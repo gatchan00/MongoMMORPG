@@ -1,0 +1,33 @@
+guion:
+
+0- instalar node y mongo
+
+1- ejecutar el server-esqueleto
+	node server-esqueleto.js
+1B - probamos con un websocket
+	ejemplo-websocket.html - se muestra como no se recicla el mensaje
+	ejemplo-websocket2.html - se muestra como aparece undefined (es asíncrono, así que no llega)
+	ejemplo-websocket3.html - ahora si, en el callback ponemos que actualice ese dato
+
+2- añado para conectarme a mongo con un dummy 
+	para ello, el mongoclient en el connect, mete una nueva función startServer, que es la que estará escuchando las llamadas
+	arranco ejemplo-websocket3 y muestro cómo deja trazas (he puesto donde el console.log un insert en mongo)
+
+
+3- hago web de dar de alta usuarios
+	pasos -> 2-crear usuario
+	3-server-mongo-crea-usuarios.js  (luego lo refactorizo para no tener el código dentro del if)
+
+4- creo un servidor para mantener las entidades (y regenererarlas)
+	1- server-backend-1.js  -> crea entidades cuando no hay suficientes 
+	2- server-backend-2.js -> Debería echar a los jugadores que llevan tiempo sin actualizar su posición o algo yborrar entidades muertas
+
+5- añado al server las opciones para recibir instrucciones de
+		conectar jugador (se genera un ticket y se almacena en un json de jugadores activos)
+		dame entidades
+		come entidad
+	4-server-mongo-multifuncional.js
+	
+6- el videojuego los pinta
+
+7- eventos

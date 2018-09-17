@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8"> 
+<header>
+<script src="websocket-crea-usuario.js"></script>
+<script type="text/javascript">
+function creaUsuario(){
+    console.log("entramos")
+    var user = document.getElementById('name').value
+    var pass = document.getElementById('pass').value
+    createWebSocketNuevoUsuario(user, pass, "mensajeWS")
+}
+</script>
+
+</header>
+<body>
+
+<h1> CREA USUARIO</h1>
+
+Name: <input type="text" id="name"><br>
+Pass: <input type="text" id="pass"><br>
+
+<button type="button" onclick="creaUsuario()"> Crea usuario </button>
+
+<p id="mensajeWS">Aquí vendrá el mensaje de resultado</p>
+
+</body>
+</html>

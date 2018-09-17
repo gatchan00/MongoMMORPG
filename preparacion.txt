@@ -1,0 +1,7 @@
+1- instalar mongo
+	mongod --dbpath mongo-data
+2- instlar node js 
+3- con npm instalar:
+	websockets
+	mongodb
+	dotenv
