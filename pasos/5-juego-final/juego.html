@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8"> 
+<header>
+<script src="../lib/phaser.min.js"></script>
+<script src="juego.js"></script>
+<script type="text/javascript">
+function validaUsuario(){
+    console.log("entramos")
+    var user = document.getElementById('name').value
+    var pass = document.getElementById('pass').value
+	var server = document.getElementById('server').value
+	var port = document.getElementById('port').value
+    createWebSocketValidaUsuario(user, pass, server, port)
+}
+</script>
+
+</header>
+<body id="idbody">
+
+<h1> CUTRE JUEGO</h1>
+
+<table style="width:40%">
+<tr>
+<th></th>
+<th></th>
+</tr>
+<tr>
+<th>server:</th>
+<th><input type="text" id="server" value="127.0.0.1"></th>
+</tr>
+</tr>
+<tr>
+<th>Port:</th>
+<th><input type="text" id="port" value="8000"></th>
+</tr>
+<tr>
+<th>Name:</th>
+<th><input type="text" id="name" value="usuario"></th>
+</tr>
+</tr>
+<tr>
+<th>Pass:</th>
+<th><input type="text" id="pass" value="usuario"></th>
+</tr>
+<tr>
+<th colspan=2><button type="button" onclick="validaUsuario()"> Login </button></th>
+</tr>
+</table>
+
+
+<p id="mensajeWS">Aquí vendrá el mensaje de resultado</p>
+
+</body>
+</html>

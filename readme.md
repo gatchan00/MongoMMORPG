@@ -38,9 +38,8 @@ set PORT=8001&&node 4-server-mongo-multifuncional.js
 ```bash
 PORT=8001 node 4-server-mongo-multifuncional.js
 ```
-5. Arrancamos el servidor web (por ejemplo, moongoose en windows) y vamos a la web del juego, que está en 
+4. Arrancamos el servidor web (por ejemplo, moongoose en windows) y vamos a la web del juego, que está en 
 ..* ```pasos/5-juego-final/juego.html```
 ..* Puedes descargar mongoose desde: https://cesanta.com/binary.html
 ..* NOTA: Si quieres crear un usuario, debes ir a ```pasos/2-crear-usuario/websocket-crea-usuario.html```
-
 	

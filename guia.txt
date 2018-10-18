@@ -4,6 +4,7 @@ guion:
 
 1- ejecutar el server-esqueleto
 	node server-esqueleto.js
+	
 1B - probamos con un websocket
 	ejemplo-websocket.html - se muestra como no se recicla el mensaje
 	ejemplo-websocket2.html - se muestra como aparece undefined (es asíncrono, así que no llega)
@@ -26,8 +27,16 @@ guion:
 		conectar jugador (se genera un ticket y se almacena en un json de jugadores activos)
 		dame entidades
 		come entidad
+		dame rivales
+		y añado las opciones para recibir el puerto por parámetro
+		por último, creo un sistema de tickets para comunicarse
 	4-server-mongo-multifuncional.js
 	
-6- el videojuego los pinta
+6- añado las opciones para comunicar desde el videojuego, y validar usaurio, etc
+	Paso 4
 
-7- eventos
+7- Levanto varios servidores de websockets y conecto a cada uno de ellos desde una web distinta
+	set PORT=8000&&node 4-server-mongo-multifuncional.js
+	set PORT=8001&&node 4-server-mongo-multifuncional.js
+	Paso 5 (con el webserver moongose encendido, accedo a juego.html y me conecto en dos ventanas distintas con puerto 8000 en una y 8001 en otra)
+	
